@@ -1,0 +1,25 @@
+/* Admin screens (small additions on top of the kit). */
+.dev3va-root .dev3va-feature-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.dev3va-root .dev3va-feature-bars__top { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; font-weight: 500; }
+.dev3va-root .dev3va-feature-bars__num { color: var( --dev3va-text-subtle ); font-size: 12px; font-weight: 400; }
+.dev3va-root .dev3va-chips { display: flex; align-items: center; gap: 6px 8px; flex-wrap: wrap; }
+.dev3va-root .dev3va-cell { display: grid; gap: 2px; min-width: 0; }
+.dev3va-root .dev3va-muted { color: var( --dev3va-text-subtle ); font-size: 12px; margin: 0; }
+.dev3va-root .dev3va-label { margin: 0 0 8px; font-weight: 600; font-size: 13px; }
+.dev3va-root .dev3va-credits { display: grid; gap: 4px; min-width: 120px; }
+.dev3va-root .dev3va-override-grid { display: grid; gap: 12px; grid-template-columns: repeat( auto-fit, minmax( 180px, 1fr ) ); }
+.dev3va-root .dev3va-search { display: flex; gap: 6px; align-items: center; }
+.dev3va-root .dev3va-search .dev3va-ui-field { margin: 0; }
+.dev3va-root .dev3va-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.dev3va-root .dev3va-filters > * { min-width: 150px; }
+.dev3va-root .dev3va-tabs-scroll { position: relative; overflow-x: auto; padding: 0 16px; border-bottom: 1px solid var( --dev3va-border ); }
+.dev3va-root .dev3va-tabs-scroll .dev3va-ui-tabs__list { border-bottom: 0; }
+.dev3va-root .dev3va-mod-row { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.dev3va-root .dev3va-mod-row img, .dev3va-root .dev3va-mod-row__ph { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex: none; background: var( --dev3va-surface-3 ); }
+.dev3va-root .dev3va-mod-image { width: 100%; max-height: 260px; object-fit: contain; border-radius: 8px; background: var( --dev3va-surface-2 ); border: 1px solid var( --dev3va-border ); }
+.dev3va-root .dev3va-mod-short { margin: 0; font-weight: 500; }
+.dev3va-root .dev3va-mod-desc { color: var( --dev3va-text-muted ); }
+.dev3va-root .dev3va-mod-desc > :first-child { margin-top: 0; }
+.dev3va-root .dev3va-mod-desc ul { list-style: disc; padding-left: 20px; }
+.dev3va-root .dev3va-issues { margin: 0; padding-left: 18px; list-style: disc; }
+.dev3va-root .dev3va-savebar { display: flex; justify-content: flex-end; }

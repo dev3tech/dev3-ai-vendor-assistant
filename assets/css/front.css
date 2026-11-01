@@ -1,0 +1,15 @@
+/* DEV3 AI Vendor Assistant: small front stylesheet (shortcut bar, store bio, app boot placeholder). */
+.dev3va-shortcuts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 12px 0 16px; padding: 10px 14px; border: 1px solid #e3e6eb; border-left: 3px solid var( --dokan-button-background-color, #7047eb ); border-radius: 6px; background: #faf9ff; font-size: 14px; line-height: 1.4; }
+.dev3va-shortcuts--wcfm { border-left-color: #17a2b8; background: #f3fbfc; border-radius: 3px; }
+.dev3va-shortcuts__mark { color: var( --dokan-button-background-color, #7047eb ); font-size: 16px; }
+.dev3va-shortcuts--wcfm .dev3va-shortcuts__mark { color: #17a2b8; }
+.dev3va-shortcuts .dev3va-shortcuts__link { display: inline-flex; align-items: center; min-height: 32px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.dev3va-store-bio { margin: 16px 0 24px; padding: 16px 20px; border: 1px solid rgba( 0, 0, 0, .08 ); border-radius: 8px; }
+.dev3va-store-bio__tagline { margin: 0 0 8px; font-weight: 600; font-size: 1.05em; }
+.dev3va-store-bio__text > :last-child { margin-bottom: 0; }
+.dev3va-vendor-boot { display: grid; gap: 12px; padding: 16px 0; }
+.dev3va-vendor-boot__bar { display: block; height: 14px; border-radius: 6px; background: linear-gradient( 90deg, #eef0f3 0%, #f7f8fa 50%, #eef0f3 100% ); background-size: 200% 100%; animation: dev3va-boot 1.2s ease-in-out infinite; }
+.dev3va-vendor-boot__bar:nth-child( 1 ) { width: 40%; height: 22px; }
+.dev3va-vendor-boot__bar:nth-child( 3 ) { width: 70%; }
+@keyframes dev3va-boot { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@media ( prefers-reduced-motion: reduce ) { .dev3va-vendor-boot__bar { animation: none; } }

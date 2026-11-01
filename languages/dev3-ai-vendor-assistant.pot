@@ -1,0 +1,2920 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Vendor Assistant for Dokan & WCFM 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-vendor-assistant\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T05:51:31+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-vendor-assistant\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-vendor-assistant.php
+msgid "DEV3 AI Vendor Assistant for Dokan & WCFM"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-vendor-assistant.php
+msgid "https://dev3.tech/item/dev3-ai-vendor-assistant"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-vendor-assistant.php
+msgid "An AI assistant inside the Dokan and WCFM vendor dashboards: listing writer, price suggestions, buyer reply drafts, store bio/SEO and performance tips, with admin quotas and moderation."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-vendor-assistant.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-vendor-assistant.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:43
+msgid "DEV3 AI Vendors"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:45
+#: build/admin.js:1
+msgid "Dashboard"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:46
+#: build/admin.js:1
+msgid "Vendors & quotas"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:47
+#: build/admin.js:1
+msgid "Moderation"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:48
+#: build/admin.js:1
+msgid "Activity"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:49
+#: includes/Admin/Admin_Page.php:82
+#: build/admin.js:1
+msgid "Settings"
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+#: includes/Plugin.php:165
+#: includes/Plugin.php:186
+#: build/admin.js:1
+#: build/vendor.js:3
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+#: includes/Plugin.php:161
+#: includes/Plugin.php:182
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+#: includes/Rest/Vendor_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Features/Insights.php:225
+msgid "Add your first listing"
+msgstr ""
+
+#: includes/Features/Insights.php:226
+msgid "Upload a few photos and notes, and the listing writer drafts the title, description and tags for you."
+msgstr ""
+
+#. translators: %d: number of products
+#: includes/Features/Insights.php:241
+#, php-format
+msgid "%d listing has no photo"
+msgid_plural "%d listings have no photo"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: product titles
+#: includes/Features/Insights.php:243
+#, php-format
+msgid "Listings with photos sell far better. Start with: %s."
+msgstr ""
+
+#. translators: %d: number of products
+#: includes/Features/Insights.php:251
+#, php-format
+msgid "%d listing needs a better description"
+msgid_plural "%d listings need better descriptions"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: product titles
+#: includes/Features/Insights.php:253
+#, php-format
+msgid "Short descriptions answer fewer buyer questions. Improve: %s."
+msgstr ""
+
+#: includes/Features/Insights.php:260
+msgid "Some listings have no price"
+msgstr ""
+
+#. translators: %s: product titles
+#: includes/Features/Insights.php:262
+#, php-format
+msgid "Buyers cannot purchase them. Get a suggestion for: %s."
+msgstr ""
+
+#: includes/Features/Insights.php:269
+msgid "Restock your best items"
+msgstr ""
+
+#. translators: %s: product titles
+#: includes/Features/Insights.php:271
+#, php-format
+msgid "Low stock: %s."
+msgstr ""
+
+#. translators: %d: number of reviews
+#: includes/Features/Insights.php:279
+#, php-format
+msgid "Reply to %d review"
+msgid_plural "Reply to %d reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Features/Insights.php:280
+msgid "Answering reviews, especially critical ones, builds trust with new buyers."
+msgstr ""
+
+#. translators: %d: number of products
+#: includes/Features/Insights.php:288
+#, php-format
+msgid "%d listings had no sales this month"
+msgstr ""
+
+#. translators: %s: product titles
+#: includes/Features/Insights.php:290
+#, php-format
+msgid "Check their price against similar listings: %s."
+msgstr ""
+
+#. translators: %s: percent
+#: includes/Features/Insights.php:298
+#, php-format
+msgid "Revenue is down %s%%"
+msgstr ""
+
+#: includes/Features/Insights.php:299
+msgid "Refresh your top listings and store bio, and compare prices with similar listings."
+msgstr ""
+
+#: includes/Features/Insights.php:306
+msgid "Your store looks healthy"
+msgstr ""
+
+#: includes/Features/Insights.php:307
+msgid "Keep listings fresh and reply to buyers quickly. Check back next week."
+msgstr ""
+
+#. translators: %d: max photos
+#: includes/Features/Listing_Writer.php:99
+#, php-format
+msgid "Use up to %d photos."
+msgstr ""
+
+#: includes/Features/Listing_Writer.php:114
+msgid "Add a photo or a few notes about the product first."
+msgstr ""
+
+#: includes/Features/Listing_Writer.php:366
+msgid "This draft was already used or discarded."
+msgstr ""
+
+#: includes/Features/Listing_Writer.php:371
+msgid "The listing needs a title."
+msgstr ""
+
+#. translators: %s: blocked words
+#: includes/Features/Listing_Writer.php:376
+#, php-format
+msgid "Remove these words before saving: %s"
+msgstr ""
+
+#. translators: %s: blocked words
+#: includes/Features/Listing_Writer.php:376
+msgid "The marketplace does not allow them in listings."
+msgstr ""
+
+#: includes/Features/Listing_Writer.php:439
+msgid "The listing could not be saved."
+msgstr ""
+
+#: includes/Features/Moderation.php:192
+msgid "Listing not found in the moderation queue."
+msgstr ""
+
+#: includes/Features/Moderation.php:207
+msgid "Give the vendor a reason for the rejection."
+msgstr ""
+
+#: includes/Features/Moderation.php:217
+msgid "Unknown moderation action."
+msgstr ""
+
+#. translators: %s: product title
+#: includes/Features/Moderation.php:251
+#, php-format
+msgid "Your listing \"%s\" is live"
+msgstr ""
+
+#. translators: %s: product title
+#: includes/Features/Moderation.php:253
+#, php-format
+msgid "Good news: the marketplace approved your listing \"%s\". It is now published."
+msgstr ""
+
+#. translators: %s: product title
+#: includes/Features/Moderation.php:256
+#, php-format
+msgid "Your listing \"%s\" needs changes"
+msgstr ""
+
+#. translators: 1: product title, 2: reason
+#: includes/Features/Moderation.php:258
+#, php-format
+msgid ""
+"The marketplace returned your listing \"%1$s\" to draft.\n"
+"\n"
+"Reason: %2$s\n"
+"\n"
+"Edit the listing in your vendor dashboard and submit it again."
+msgstr ""
+
+#: includes/Features/Moderation.php:276
+msgid "Listing not found."
+msgstr ""
+
+#: includes/Features/Photos.php:30
+msgid "The photo could not be uploaded."
+msgstr ""
+
+#: includes/Features/Photos.php:33
+msgid "Photos can be up to 8 MB."
+msgstr ""
+
+#: includes/Features/Photos.php:38
+msgid "Use a JPEG, PNG or WebP photo."
+msgstr ""
+
+#: includes/Features/Photos.php:67
+msgid "The photo could not be saved."
+msgstr ""
+
+#. translators: 1: number of listings, 2: low price, 3: high price
+#: includes/Features/Pricing.php:167
+#, php-format
+msgid "Based on %1$d similar listings; most sell between %2$s and %3$s."
+msgstr ""
+
+#: includes/Features/Pricing.php:205
+msgid "Pick one of your products or type a product title."
+msgstr ""
+
+#: includes/Features/Pricing.php:383
+msgid "Enter a price greater than zero."
+msgstr ""
+
+#: includes/Features/Pricing.php:386
+msgid "Variable products are priced per variation in the product editor."
+msgstr ""
+
+#: includes/Features/Profile.php:187
+msgid "Our store"
+msgstr ""
+
+#: includes/Features/Profile.php:189
+msgid "quality products"
+msgstr ""
+
+#. translators: 1: store name, 2: categories
+#: includes/Features/Profile.php:191
+#, php-format
+msgid "Welcome to %1$s. We offer %2$s, picked and packed with care."
+msgstr ""
+
+#: includes/Features/Profile.php:192
+msgid "Have a question about an item? Send us a message and we will be happy to help."
+msgstr ""
+
+#. translators: 1: store name, 2: categories
+#: includes/Features/Profile.php:194
+#, php-format
+msgid "Shop %2$s from %1$s. Friendly service and carefully packed orders."
+msgstr ""
+
+#. translators: %s: categories
+#: includes/Features/Profile.php:198
+#, php-format
+msgid "%s, chosen with care"
+msgstr ""
+
+#: includes/Features/Profile.php:216
+msgid "No marketplace plugin is active."
+msgstr ""
+
+#: includes/Front/Vendor_App.php:100
+msgid "The AI assistant needs JavaScript."
+msgstr ""
+
+#: includes/Front/Vendor_App.php:116
+msgid "The AI assistant is available to marketplace vendors."
+msgstr ""
+
+#: includes/Marketplace/Shortcuts.php:39
+msgid "Improve this listing with AI"
+msgstr ""
+
+#: includes/Marketplace/Shortcuts.php:39
+msgid "Write this listing with AI"
+msgstr ""
+
+#: includes/Marketplace/Shortcuts.php:45
+msgid "Suggest a price"
+msgstr ""
+
+#: includes/Marketplace/Wcfm.php:383
+#: includes/Rest/Vendor_Controller.php:91
+msgid "The AI assistant is not available for your account."
+msgstr ""
+
+#: includes/Messages/Dokan_Support.php:40
+msgid "Support topic"
+msgstr ""
+
+#: includes/Messages/Dokan_Support.php:156
+#: includes/Messages/Inbox.php:104
+#: includes/Messages/Inbox.php:378
+#: includes/Messages/Order_Notes.php:140
+#: includes/Messages/Reviews.php:171
+#: includes/Messages/Wcfm_Inquiries.php:128
+#: includes/Vendor/Access.php:61
+msgid "That item was not found in your store."
+msgstr ""
+
+#: includes/Messages/Dokan_Support.php:170
+#: includes/Messages/Reviews.php:188
+msgid "The reply could not be posted."
+msgstr ""
+
+#: includes/Messages/Inbox.php:144
+msgid "there"
+msgstr ""
+
+#: includes/Messages/Inbox.php:145
+msgid "your order"
+msgstr ""
+
+#. translators: %s: buyer first name
+#: includes/Messages/Inbox.php:147
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:150
+#, php-format
+msgid "Thanks for your message about %s. We are checking the shipping status now and will send you an update with tracking details as soon as possible."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:152
+#, php-format
+msgid "We are sorry to hear there is a problem with %s. Please reply with your order number and a photo if anything is damaged, and we will sort out the next steps under our return policy."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:154
+#, php-format
+msgid "Good question about the fit of %s. We will check the exact measurements for you and reply shortly so you can pick the right size."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:156
+#, php-format
+msgid "Thanks for your interest in %s. We are checking stock now and will let you know when it is available."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:158
+#, php-format
+msgid "We are really sorry %s did not meet your expectations. We would like to make this right; please tell us a little more and we will help straight away."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:160
+#, php-format
+msgid "Thank you so much for the kind words about %s! It means a lot to our small team. We hope to see you again soon."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:162
+#, php-format
+msgid "Thanks for your question about %s. We will check the details and get back to you shortly."
+msgstr ""
+
+#. translators: %s: product
+#: includes/Messages/Inbox.php:164
+#, php-format
+msgid "Thanks for getting in touch about %s. We will get back to you shortly."
+msgstr ""
+
+#. translators: %s: store name
+#: includes/Messages/Inbox.php:167
+#, php-format
+msgid "Best regards, %s"
+msgstr ""
+
+#. translators: %s: store name
+#: includes/Messages/Inbox.php:167
+msgid "Best regards"
+msgstr ""
+
+#: includes/Messages/Inbox.php:255
+msgid "Paste the buyer message first."
+msgstr ""
+
+#: includes/Messages/Inbox.php:375
+msgid "Write a reply first."
+msgstr ""
+
+#: includes/Messages/Order_Notes.php:38
+msgid "Order note"
+msgstr ""
+
+#. translators: %s: order number
+#: includes/Messages/Order_Notes.php:75
+#, php-format
+msgid "Order #%s"
+msgstr ""
+
+#: includes/Messages/Order_Notes.php:145
+msgid "The reply could not be added to the order."
+msgstr ""
+
+#: includes/Messages/Reviews.php:36
+msgid "Product review"
+msgstr ""
+
+#: includes/Messages/Wcfm_Inquiries.php:37
+msgid "Inquiry"
+msgstr ""
+
+#: includes/Messages/Wcfm_Inquiries.php:71
+msgid "Store inquiry"
+msgstr ""
+
+#. translators: %s: site name
+#: includes/Messages/Wcfm_Inquiries.php:162
+#, php-format
+msgid "%s: Reply to your inquiry"
+msgstr ""
+
+#: includes/Plugin.php:148
+#: includes/Plugin.php:157
+#: includes/Plugin.php:204
+msgid "Vendor AI activity"
+msgstr ""
+
+#: includes/Plugin.php:169
+#: build/admin.js:1
+msgid "Credits"
+msgstr ""
+
+#: includes/Plugin.php:178
+msgid "Vendor AI drafts"
+msgstr ""
+
+#: includes/Plugin.php:190
+#: build/vendor.js:1
+#: build/vendor.js:3
+msgid "Draft"
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:210
+msgid "That user is not a vendor."
+msgstr ""
+
+#: includes/Rest/Vendor_Controller.php:84
+msgid "Log in to your vendor account first."
+msgstr ""
+
+#: includes/Rest/Vendor_Controller.php:87
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+#: includes/Rest/Vendor_Controller.php:94
+msgid "This feature is turned off for your store."
+msgstr ""
+
+#: includes/Rest/Vendor_Controller.php:203
+msgid "Choose a photo to upload."
+msgstr ""
+
+#: includes/Settings.php:155
+#: build/admin.js:1
+#: build/vendor.js:4
+msgid "AI Assistant"
+msgstr ""
+
+#: includes/Settings.php:165
+#: build/admin.js:1
+#: build/vendor.js:3
+msgid "Listing writer"
+msgstr ""
+
+#: includes/Settings.php:166
+#: build/admin.js:1
+msgid "Price suggestions"
+msgstr ""
+
+#: includes/Settings.php:167
+#: build/admin.js:1
+msgid "Buyer replies"
+msgstr ""
+
+#: includes/Settings.php:168
+#: build/admin.js:1
+msgid "Store bio & SEO"
+msgstr ""
+
+#: includes/Settings.php:169
+#: build/admin.js:1
+msgid "Performance tips"
+msgstr ""
+
+#: includes/Vendor/Quota.php:119
+msgid "Your monthly AI credits are used up."
+msgstr ""
+
+#: includes/Vendor/Quota.php:120
+msgid "The basic (non-AI) helpers still work. Credits reset on the 1st of the month, or ask the marketplace to raise your limit."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3VA_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3VA_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#: build/vendor.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#: build/vendor.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:3
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:3
+msgid "Store"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:2
+msgid "Credits used"
+msgstr ""
+
+#: build/admin.js:1
+msgid "How your vendors use the AI assistant this month."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Manage vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No marketplace plugin found"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Install and activate Dokan (Lite or Pro) or WCFM Marketplace. The assistant appears in their vendor dashboards."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add your API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendors can already use the basic (non-AI) helpers. Add a Google Gemini key to turn on AI writing, pricing and replies."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marketplace"
+msgstr ""
+
+#. translators: %d: vendors
+#: build/admin.js:1
+#, js-format
+msgid "%d vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendors using AI"
+msgstr ""
+
+#. translators: %d: requests
+#: build/admin.js:1
+#, js-format
+msgid "%d AI requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. vendor AI cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "This month, USD"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Listings to review"
+msgstr ""
+
+#. translators: %s: moderation mode
+#: build/admin.js:1
+#, js-format
+msgid "Moderation: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Credits by feature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "This month, all vendors."
+msgstr ""
+
+#. translators: 1: credits, 2: requests
+#: build/admin.js:1
+#, js-format
+msgid "%1$s credits · %2$s requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Top vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No AI use yet this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendors find the assistant in their dashboard menu."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Moderation queue"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open queue"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "%d awaiting review"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "%d flagged"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "%d approved"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "%d rejected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing to review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI-written listings appear here when moderation is on."
+msgstr ""
+
+#: build/admin.js:1
+msgid "On"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Unlimited"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendor settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI assistant access"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Off hides the assistant from this vendor and blocks its API."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly credits"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom limit for this vendor"
+msgstr ""
+
+#. translators: %d: credits
+#: build/admin.js:1
+#, js-format
+msgid "Marketplace default: %d credits (0 = unlimited)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Credits per month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "0 = unlimited."
+msgstr ""
+
+#. translators: 1: used, 2: requests, 3: cost
+#: build/admin.js:1
+#, js-format
+msgid "Used this month: %1$s credits in %2$s requests (about %3$s)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Currently on"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Currently off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendor"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Access"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Credits this month"
+msgstr ""
+
+#. translators: 1: enabled, 2: total
+#: build/admin.js:1
+#, js-format
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Products"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn the assistant on or off per vendor, set monthly credits and pick the features each store gets."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search vendors…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No vendors found"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendors are users with the Dokan \"Vendor\" or WCFM \"Store Vendor\" role."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Awaiting review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flagged"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Approved"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rejected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Listing approved and published."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Listing returned to the vendor."
+msgstr ""
+
+#. translators: %s: store
+#: build/admin.js:1
+#, js-format
+msgid "By %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approve"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approve & publish"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI-written"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Blocked words found"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Policy check"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI reads the listing against your marketplace policy and lists anything to fix."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Note to the vendor"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Required to reject. The vendor gets it by email and in their assistant history."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit in WooCommerce"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Preview"
+msgstr ""
+
+#: build/admin.js:1
+msgid "To review"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+#: build/vendor.js:3
+msgid "Listing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "State"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flags"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+#: build/vendor.js:3
+msgid "Price"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Updated"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Listings written with the AI assistant. Approve to publish, or send them back with a note."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Moderation state"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No listings here"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI-written listings appear here when moderation is on (Settings → Moderation)."
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:3
+msgid "All features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All months"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:3
+msgid "When"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Result"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OK"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Every AI request a vendor made: credits charged, tokens and estimated cost. Cached answers are free."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Export CSV"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vendor AI ledger"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No AI requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests appear here as soon as vendors use the assistant."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Listing writer (photos + notes)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Buyer reply drafts"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "What vendors get, how many credits they have, and how AI-written listings are moderated."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marketplace & vendor menu"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marketplace plugin"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Detect automatically"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Menu label for vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Menu position"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dokan: 30 = after Products, 50 = after Orders."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show the DEV3 AI name to vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Off: buttons say \"Generate with AI\"."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Features for vendors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marketplace-wide defaults. You can override them per vendor on the Vendors screen."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI credits"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Each AI request costs credits. Cached answers and basic (non-AI) drafts are free. The API Config monthly budget still applies to the whole site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Credits per vendor per month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "credits per request"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI-written listings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Hold for review before publishing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Publish, but list them for review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No extra moderation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "When a blocked word is found"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flag the listing for review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Do not let the vendor save it"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Blocked words"
+msgstr ""
+
+#: build/admin.js:1
+msgid "One per line or comma separated, e.g. replica, cure, whatsapp."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marketplace listing policy (for the AI check)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Email vendors when a listing is approved or rejected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Writing & replies"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default tone"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Friendly"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Professional"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Enthusiastic"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Short & clear"
+msgstr ""
+
+#: build/admin.js:1
+#: build/vendor.js:1
+msgid "Premium"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Output language"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Site language"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Photos per listing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write image alt text from the AI draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Comparable listings for pricing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low-stock threshold (tips)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marketplace policies for buyer replies"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rules every reply draft follows, e.g. refunds go through the marketplace. Vendors can add their own."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Print store SEO tags on Dokan Lite store pages"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dokan Pro and WCFM print their own."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect Google Gemini, pick models and set a monthly AI budget for the whole marketplace."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests, tokens and estimated cost of every DEV3 AI request (vendors and admins)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Side by side"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#: build/vendor.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Regenerate"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Generate with AI"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "AI draft"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Draft (basic helper)"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Tone"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Basic draft (no AI)"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Create a draft"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Uses 1 credit"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "credits"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "We used the basic helper instead, so nothing was charged. Review and edit the draft below."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Your monthly AI credits are used up"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "The basic helper still works. Credits reset on the 1st of the month."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "AI writing is not available right now. The basic helper still creates a draft you can edit."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Flagged for review"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Needs changes"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "just now"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "min ago"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "h ago"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Write a listing"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Upload photos and a few notes. Get a title, description, tags and SEO text."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Check a price"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Compare with similar listings on the marketplace and get a suggested price."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Reply to buyers"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Reviews, order notes and questions in one place, with reply drafts."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Polish your store"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "A store bio, tagline and SEO title and description."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Get growth tips"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Your sales, listing quality and reviews, summed up as clear next steps."
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Reply"
+msgstr ""
+
+#: build/vendor.js:1
+#: build/vendor.js:3
+msgid "Store profile"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Tips"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "AI credits this month"
+msgstr ""
+
+#: build/vendor.js:1
+msgid "Your store has unlimited AI credits."
+msgstr ""
+
+#. translators: %d: monthly credits
+#: build/vendor.js:2
+#, js-format
+msgid "of %d left"
+msgstr ""
+
+#. translators: %s: date
+#: build/vendor.js:3
+#, js-format
+msgid "Resets on %s. Basic (non-AI) drafts are always free."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Listings written with AI are reviewed by the marketplace before they go live."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Recent drafts"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "View all"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Nothing yet. Pick a task above to get started."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Title"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Short description"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Description"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Tags (comma separated)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "SEO title"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "SEO description"
+msgstr ""
+
+#. translators: %d: max photos
+#: build/vendor.js:3
+#, js-format
+msgid "You can add up to %d photos."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Add product photos"
+msgstr ""
+
+#. translators: %d: max photos
+#: build/vendor.js:3
+#, js-format
+msgid "Drag & drop or browse. JPEG, PNG or WebP, up to %d photos."
+msgstr ""
+
+#. translators: %d: photo number
+#: build/vendor.js:3
+#, js-format
+msgid "Photo %d"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Main"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Remove photo"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Choose a category"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Category, attributes and price"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Check these before saving."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Category"
+msgstr ""
+
+#. translators: %s: currency
+#: build/vendor.js:3
+#, js-format
+msgid "Price (%s)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Optional. Use Pricing to compare first."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Attributes"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No attributes yet."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Name"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Value"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Remove attribute"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Add attribute"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Competitive (around the middle)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Premium (upper range)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Quick sale (lower range)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Instructions (optional)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "e.g. offer a replacement, mention dispatch on Monday"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Reply sent."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Reply copied to the clipboard."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Send reply"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Copy reply"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Replied"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Needs reply"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your reply"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Store bio"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Tagline"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Keywords"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No photo"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No price"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No category"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Do it now"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Used"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Discarded"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Home"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Pricing"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Buyer messages"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Performance"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "History"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "New listing"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Let the assistant suggest"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your listing was created"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your listing was updated"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Open in product editor"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "View"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "It is waiting for the marketplace to review it. You will get an email when it is approved."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "It is live and the marketplace may review it."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "It is live in your store."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "It is saved and waiting for publication."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Photos and notes"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "The more you tell the assistant (material, size, condition, what is included), the better the listing."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "The draft improves this listing; nothing changes until you accept."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Notes"
+msgstr ""
+
+#: build/vendor.js:3
+msgid ""
+"Hand-thrown ceramic mug\n"
+"Material: stoneware\n"
+"Capacity: 350 ml\n"
+"Dishwasher safe"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Words the marketplace does not allow"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Listing created."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Listing updated."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Update listing"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Create listing"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "AI-written listings are checked by the marketplace before they go live."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your store"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Rating"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Not listed yet (type a title)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Any category"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "What are you pricing?"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "We compare it with similar published listings on the marketplace. Only public prices and ratings are used."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your product"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Product title"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Goal"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Anything special? (optional)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Handmade, limited edition, includes gift box…"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No similar listings found"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Try a shorter title or another category."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Suggested price"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Suggested price (from the numbers)"
+msgstr ""
+
+#. translators: 1: low price, 2: high price
+#: build/vendor.js:3
+#, js-format
+msgid "Range %1$s – %2$s"
+msgstr ""
+
+#. translators: %s: confidence
+#: build/vendor.js:3
+#, js-format
+msgid "Confidence: %s"
+msgstr ""
+
+#. translators: %s: currency
+#: build/vendor.js:3
+#, js-format
+msgid "New price (%s)"
+msgstr ""
+
+#. translators: %s: price
+#: build/vendor.js:3
+#, js-format
+msgid "Current price: %s"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No price yet."
+msgstr ""
+
+#. translators: %s: price
+#: build/vendor.js:3
+#, js-format
+msgid "Price updated to %s."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Apply price"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Use this price when you create the listing."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Similar listings"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Lowest"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Median"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Highest"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Comparable listings"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Inbox"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Paste a message"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Filter messages"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "All"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "All caught up"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No buyer messages yet"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Reviews, order notes and questions about your products show up here."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Buyer"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Reply to a pasted message"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "For messages from email or chat. The draft is copied, not sent."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Buyer first name (optional)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Buyer message"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Pick a message"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Choose a message on the left to see it and draft a reply."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No message sources are available on this marketplace yet."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your store today"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "View store"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Not set"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Bio"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Write a new profile"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Uses your store name, categories and best products. Add anything that makes you different."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "About your store (optional)"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Family workshop in Porto since 2019, small batches, plastic-free packaging…"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Store profile saved."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Save to my store"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Reply policies"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Shipping times, returns and anything buyers often ask. Reply drafts follow these rules."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Reply policies saved."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Save policies"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your policies"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "We ship within 2 working days. Returns accepted within 30 days, unused, buyer pays return postage."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Product"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Sold"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Revenue"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "What to fix"
+msgstr ""
+
+#. translators: %d: days
+#: build/vendor.js:3
+#, js-format
+msgid "Revenue, last %d days"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No sales in the previous period"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "vs previous period"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Orders"
+msgstr ""
+
+#. translators: %d: orders
+#: build/vendor.js:3
+#, js-format
+msgid "%d before"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Average order"
+msgstr ""
+
+#. translators: %d: reviews
+#: build/vendor.js:3
+#, js-format
+msgid "%d reviews"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your growth plan"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Tips for your store"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Written from your numbers below. Only your own store data was used."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Checks of your listings, stock, reviews and sales."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Summarize with DEV3 AI"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Summarize with AI"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Same numbers as earlier today: this summary was reused at no cost."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Top products"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No sales in this period yet"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Listing quality"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "All listings look complete"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Low stock"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No published listings yet"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Publish a listing to see performance tips."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Made with"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "AI"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Basic helper"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Open"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Edit product"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Your drafts"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Everything the assistant wrote for your store. Only you and your staff can see this."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "No drafts yet"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Drafts you create appear here."
+msgstr ""
+
+#: build/vendor.js:3
+msgid "Unlimited AI credits"
+msgstr ""
+
+#: build/vendor.js:3
+msgid "AI credits left this month"
+msgstr ""
+
+#. translators: 1: credits left, 2: monthly credits
+#: build/vendor.js:4
+#, js-format
+msgid "%1$d of %2$d credits left"
+msgstr ""
+
+#: build/vendor.js:4
+msgid "Assistant sections"
+msgstr ""

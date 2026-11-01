@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Vendor Assistant for Dokan &amp; WCFM: Documentation</title>
+<style>
+:root { --brand: #4f46e5; --text: #1f2328; --muted: #4b5563; --line: #e3e6eb; --soft: #f6f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; padding: 40px 16px; }
+header .wrap, main { max-width: 980px; margin: 0 auto; }
+header h1 { margin: 0 0 6px; font-size: clamp(24px, 4vw, 34px); }
+header p { margin: 0; opacity: .92; }
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); overflow-x: auto; white-space: nowrap; padding: 0 16px; z-index: 2; }
+nav a { display: inline-block; padding: 12px 10px; color: var(--muted); text-decoration: none; font-size: 14px; }
+nav a:hover, nav a:focus { color: var(--brand); }
+main { padding: 8px 16px 64px; }
+h2 { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 24px; }
+h3 { margin-top: 28px; font-size: 18px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px; }
+code { background: var(--soft); padding: 2px 6px; border-radius: 4px; }
+pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; color: inherit; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; display: block; overflow-x: auto; }
+th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
+th { background: var(--soft); }
+.note { background: #eef2ff; border-left: 4px solid var(--brand); padding: 12px 16px; border-radius: 6px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.shots figure { margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.shots img { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; }
+.shots figcaption { padding: 8px 12px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+	<h1>DEV3 AI Vendor Assistant for Dokan &amp; WCFM</h1>
+	<p>Version 1.0.0 · An AI assistant inside your marketplace's vendor dashboard: listings from photos, price suggestions, buyer replies, store bio/SEO and growth tips, with per-vendor quotas and moderation.</p>
+</div></header>
+<nav aria-label="Sections"><a href="#install">Install</a><a href="#key">Gemini key</a><a href="#vendors">For vendors</a><a href="#listing">Listing writer</a><a href="#pricing">Pricing</a><a href="#messages">Buyer replies</a><a href="#profile">Store profile</a><a href="#insights">Performance</a><a href="#admin">Admin</a><a href="#quotas">Quotas</a><a href="#moderation">Moderation</a><a href="#privacy">Privacy &amp; isolation</a><a href="#noai">Without AI</a><a href="#hooks">Hooks</a><a href="#faq">FAQ</a><a href="#changelog">Changelog</a></nav>
+<main>
+
+<div class="shots" style="margin-top:24px">
+	<figure><img src="screenshots/1-dokan-listing-writer.png" alt="Listing writer inside the Dokan dashboard"><figcaption>Listing writer in Dokan</figcaption></figure>
+	<figure><img src="screenshots/2-dokan-buyer-replies.png" alt="Buyer message inbox with a reply draft"><figcaption>Buyer replies</figcaption></figure>
+	<figure><img src="screenshots/3-wcfm-performance-tips.png" alt="Performance tips inside WCFM"><figcaption>Performance tips in WCFM</figcaption></figure>
+	<figure><img src="screenshots/4-admin-dashboard.png" alt="Admin dashboard"><figcaption>Admin dashboard</figcaption></figure>
+	<figure><img src="screenshots/5-admin-moderation.png" alt="Moderation queue with AI policy check"><figcaption>Moderation &amp; policy check</figcaption></figure>
+	<figure><img src="screenshots/6-mobile-listing-writer.png" alt="Listing writer on a phone"><figcaption>Works on phones</figcaption></figure>
+</div>
+
+<h2 id="install">Install</h2>
+<ol>
+	<li>Requirements: WordPress 6.0+, PHP 7.4+ (tested on 8.3), WooCommerce 8+, and <strong>Dokan</strong> (Lite or Pro) <em>or</em> <strong>WCFM Frontend Manager + WCFM Marketplace</strong> (free or Ultimate).</li>
+	<li>Plugins → Add New → Upload Plugin → choose <code>dev3-ai-vendor-assistant.zip</code> → Install → Activate.</li>
+	<li>Open <strong>DEV3 AI Vendors</strong> in wp-admin. The dashboard shows which marketplace was detected.</li>
+	<li>Vendors now see <strong>AI Assistant</strong> in their dashboard menu (Dokan: <code>/dashboard/ai-assistant/</code>, WCFM: <code>/store-manager/ai-assistant/</code>). If the page shows "not found", visit Settings → Permalinks once and click Save.</li>
+	<li>Optional: put the assistant on any page with the shortcode <code>[dev3va_vendor_assistant]</code>.</li>
+</ol>
+<p class="note">No licence key or activation is needed. The plugin is fully usable without an AI key: every feature has a basic (non-AI) helper.</p>
+
+<h2 id="key">Connect Google Gemini</h2>
+<ol>
+	<li>Create a key at <a href="https://aistudio.google.com/app/apikey">Google AI Studio</a>.</li>
+	<li>DEV3 AI Vendors → <strong>API Config</strong> → paste the key → Save. Or add <code>define( 'DEV3VA_GEMINI_API_KEY', '…' );</code> to <code>wp-config.php</code>.</li>
+	<li>Pick the models (default <code>gemini-2.5-flash</code>), and set a <strong>monthly budget</strong> in USD for the whole site. When it is reached, AI pauses and vendors keep using the basic helpers.</li>
+</ol>
+<p>The key stays on your server. Vendors' browsers only talk to your WordPress REST API.</p>
+
+<h2 id="vendors">For vendors</h2>
+<p>The assistant opens inside the vendor dashboard and uses the marketplace's own colours (Dokan's theme colour, WCFM's highlight colour). It has tabs for Home, Listing writer, Pricing, Buyer messages, Store profile, Performance and History. The credits pill at the top shows how many AI credits are left this month. Every result is a <strong>draft</strong>: the vendor reviews, edits, accepts or rejects it; nothing changes until they click.</p>
+<p>Shortcut links appear on the Dokan product edit form and in the WCFM product manager: "Improve this listing with AI" and "Suggest a price".</p>
+
+<h3 id="listing">Listing writer</h3>
+<ul>
+	<li>Upload up to 6 photos (JPEG, PNG, WebP, 8 MB each) and type a few notes. Lines like <code>Capacity: 350 ml</code> become attributes.</li>
+	<li>DEV3 AI looks at the photos and notes and writes a title, short description, description, tags, attributes, category, SEO title/description and alt text for each photo.</li>
+	<li>Pick "New listing" or one of your products to improve it (a diff shows what changes).</li>
+	<li><strong>Create listing</strong> makes a WooCommerce product owned by the vendor, with the photos as featured image and gallery. With moderation on, AI-written listings wait for review.</li>
+</ul>
+
+<h3 id="pricing">Price suggestions</h3>
+<p>The assistant collects similar <em>published</em> listings from the marketplace (same category, similar title, price above zero) and shows the count, lowest, median and highest price and the list itself. Only public data is used: title, price, rating and store name, never sales numbers. Choose a goal (competitive, premium, quick sale). DEV3 AI suggests a price, a range and a reason; the server keeps it within 0.5× the lowest and 1.5× the highest comparable price. <strong>Apply price</strong> sets the regular price of the vendor's product.</p>
+
+<h3 id="messages">Buyer replies</h3>
+<p>One inbox for: product reviews on the vendor's products, notes buyers left on orders, WCFM inquiries, and Dokan Pro store-support topics. Pick a message, choose a tone, add instructions if you like, and get a reply draft that follows the marketplace's and the vendor's policies. <strong>Send reply</strong> writes it back to the right place: a reply under the review, a customer note on the order (WooCommerce emails it), the WCFM inquiry reply (with email), or a support-topic comment. "Paste a message" drafts a reply for emails and chats; it is copied, not sent.</p>
+
+<h3 id="profile">Store bio &amp; SEO</h3>
+<p>From the store name, categories, best products and the vendor's notes, DEV3 AI writes a bio, tagline, SEO title, SEO description and keywords. Saving writes into the marketplace's own fields: Dokan <code>vendor_biography</code> and <code>store_seo</code> (the keys Dokan Pro uses; with Dokan Lite the plugin prints the bio and SEO tags on the store page), WCFM store description and store SEO. Vendors also keep their own reply policies here.</p>
+
+<h3 id="insights">Performance tips</h3>
+<p>Last 30 days vs the 30 before, from the vendor's own orders: revenue, orders, average order, rating, top products, listing quality (no photo, short description, no price, no category), low stock and unanswered reviews. Rule-based tips always show; <strong>Summarize with DEV3 AI</strong> turns the numbers into a short, prioritised plan (cached for the day).</p>
+
+<h2 id="admin">Admin screens</h2>
+<table>
+	<tr><th>Screen</th><th>What it does</th></tr>
+	<tr><td>Dashboard</td><td>Marketplace detected, vendors using AI, credits and estimated cost this month, credits by feature, top vendors, moderation counts.</td></tr>
+	<tr><td>Vendors &amp; quotas</td><td>Every vendor with access, credits used/limit and cost. Edit a vendor: access on/off, custom monthly credits, per-feature override (default / on / off).</td></tr>
+	<tr><td>Moderation</td><td>AI-written listings to review, approved and rejected. Preview, run a DEV3 AI policy check, approve &amp; publish, or reject with a note (emailed to the vendor and shown in their History).</td></tr>
+	<tr><td>Activity</td><td>The vendor AI ledger: every request with store, user, feature, credits, tokens, estimated cost and result. Filter by feature and month; export CSV.</td></tr>
+	<tr><td>Settings</td><td>Marketplace, vendor menu label/position, DEV3 name shown to vendors, features, credits and weights, moderation, blocked words, policies, tone, language, photos, comparables, low-stock threshold.</td></tr>
+	<tr><td>API Config / Usage Logs</td><td>Gemini key, models, monthly budget, AI on/off, cache, PII masking; all AI requests with tokens and cost.</td></tr>
+</table>
+
+<h2 id="quotas">Quotas and the ledger</h2>
+<ul>
+	<li>Each vendor gets a number of <strong>credits per month</strong> (default 100; 0 = unlimited). Override it per vendor.</li>
+	<li>Each AI request costs credits by feature (listing 2, others 1; editable in Settings or with the <code>dev3va_feature_credits</code> filter). Cached answers and basic drafts cost nothing.</li>
+	<li>When a vendor runs out, AI requests return "Your monthly AI credits are used up"; drafting features switch to the basic helper automatically. Credits reset on the 1st of the month (UTC).</li>
+	<li>Staff (Dokan Pro vendor staff, WCFM Ultimate shop staff) use their vendor's credits.</li>
+</ul>
+
+<h2 id="moderation">Moderation</h2>
+<ul>
+	<li><strong>Hold for review</strong> (default): AI-written listings are saved as <em>pending</em> until an admin approves them.</li>
+	<li><strong>Publish, but list for review</strong>: they publish with the marketplace's normal status and appear in the queue as flagged.</li>
+	<li><strong>Blocked words</strong>: listings containing them are flagged, or the vendor cannot save them (setting).</li>
+	<li>Basic (non-AI) listings follow the marketplace's own rules.</li>
+</ul>
+
+<h2 id="privacy">Privacy and data isolation</h2>
+<ul>
+	<li>Every vendor route needs a logged-in vendor (or their staff) and a valid nonce, checks the feature switch, and verifies ownership of every product, photo, order, message and draft. Other stores' ids return 404.</li>
+	<li>Only the fields a feature needs are sent to Google Gemini. Buyers are reduced to their first name; emails and addresses are never sent. PII masking (API Config) applies to every prompt.</li>
+	<li>The privacy-policy helper names Google Gemini as processor. WordPress's personal-data export/erase tools include the vendor ledger and drafts.</li>
+</ul>
+
+<h2 id="noai">Without AI</h2>
+<p>With no key, AI turned off, the budget reached or a vendor's credits used up, the plugin still works: listings are drafted from the notes, prices come from the comparables' median/quartiles, replies use intent templates, store profiles use a template, and performance tips come from rules.</p>
+
+<h2 id="hooks">Hooks for developers</h2>
+<table>
+	<tr><th>Hook</th><th>Type</th><th>Use</th></tr>
+	<tr><td><code>dev3va_marketplace_adapters</code></td><td>filter</td><td>Add an adapter (extend <code>Dev3\AiVendorAssistant\Marketplace\Adapter</code>) for another marketplace.</td></tr>
+	<tr><td><code>dev3va_message_sources</code></td><td>filter</td><td>Add a buyer-message source (extend <code>Messages\Source</code>).</td></tr>
+	<tr><td><code>dev3va_current_vendor</code></td><td>filter</td><td>Map a user to a vendor id.</td></tr>
+	<tr><td><code>dev3va_vendor_feature_enabled</code></td><td>filter</td><td>Final say on a feature for a vendor.</td></tr>
+	<tr><td><code>dev3va_vendor_credit_limit</code>, <code>dev3va_feature_credits</code></td><td>filter</td><td>Monthly credits and per-request cost.</td></tr>
+	<tr><td><code>dev3va_vendor_rate_limit</code></td><td>filter</td><td>Vendor POST requests per minute (default 30).</td></tr>
+	<tr><td><code>dev3va_insights_paid_statuses</code></td><td>filter</td><td>Order statuses counted as sales.</td></tr>
+	<tr><td><code>dev3va_dokan_support_store_meta</code></td><td>filter</td><td>Meta key of the Dokan Pro support topic's store.</td></tr>
+	<tr><td><code>dev3va_prompt_va_listing</code> (…<code>va_price</code>, <code>va_reply</code>, <code>va_profile</code>, <code>va_insights</code>, <code>va_moderation</code>)</td><td>filter</td><td>Change a prompt template or schema.</td></tr>
+	<tr><td><code>dev3va_listing_applied</code></td><td>action</td><td>After a vendor saved a listing (product id, vendor, fields, moderation state).</td></tr>
+	<tr><td><code>dev3va_listing_moderated</code></td><td>action</td><td>After an admin approved or rejected a listing.</td></tr>
+	<tr><td><code>dev3va_reply_sent</code></td><td>action</td><td>After a vendor sent a buyer reply.</td></tr>
+	<tr><td><code>dev3va_dokan_profile_saved</code>, <code>dev3va_wcfm_profile_saved</code></td><td>action</td><td>After store profile fields were saved.</td></tr>
+	<tr><td><code>dev3va_ai_guard</code></td><td>filter</td><td>Block any AI task (return a <code>WP_Error</code>).</td></tr>
+</table>
+<p>REST API under <code>/wp-json/dev3va/v1/</code>: <code>vendor/*</code> for vendors (me, products, photos, listing/draft, listing/apply, price, price/apply, messages, messages/draft, messages/send, profile, profile/draft, profile/apply, insights, insights/ai, history, drafts/&lt;id&gt;/reject) and <code>admin/*</code> for administrators (overview, vendors, vendors/&lt;id&gt;, ledger, moderation, moderation/&lt;id&gt;, moderation/&lt;id&gt;/check).</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>Does it work with Dokan Pro and WCFM Ultimate?</h3>
+<p>Yes. It uses Dokan's and WCFM's documented hooks and data. Pro features it supports: Dokan Pro biography and store SEO fields, vendor staff and store-support topics; WCFM Ultimate shop staff.</p>
+<h3>Can vendors see each other's data?</h3>
+<p>No. Price comparisons use only public listing data (title, price, rating, store). Everything else (products, orders, messages, drafts, credits) is scoped to the vendor and covered by automated tests.</p>
+<h3>Who pays for the AI?</h3>
+<p>The marketplace owner's Gemini key is used. Control the cost with vendor credits and the monthly budget; the Activity screen shows the estimated cost per vendor.</p>
+<h3>Can I hide the DEV3 name from vendors?</h3>
+<p>Yes: Settings → "Show the DEV3 AI name to vendors" off. Buttons then say "Generate with AI", and you can rename the menu item.</p>
+<h3>The assistant page shows 404.</h3>
+<p>Save Settings → Permalinks once to refresh rewrite rules.</p>
+
+<h2 id="changelog">Changelog</h2>
+<h3>1.0.0 · 2026-10-25</h3>
+<ul><li>Initial release: listing writer from photos, price suggestions, buyer replies, store bio/SEO, performance tips, per-vendor quotas and ledger, moderation with AI policy check, Dokan and WCFM support.</li></ul>
+</main>
+</body>
+</html>
